@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn-base {
+    @apply cursor-pointer w-fit min-w-[10rem] duration-200 text-[0.813rem] disabled:cursor-not-allowed uppercase font-bold px-[1.875rem] py-[0.938rem] text-center;
+  }
+
+  .btn-default {
+    @apply text-white bg-beige hover:bg-light-beige focus-visible:bg-light-beige disabled:bg-light-beige;
+  }
+
+  .btn-outline {
+    @apply text-black border-[1px] border-black hover:bg-black hover:text-white focus-visible:bg-black focus-visible:text-white disabled:bg-black disabled:text-white;
+  }
+
+  .btn-black {
+    @apply text-white bg-black hover:bg-gray focus-visible:bg-gray disabled:bg-gray;
+  }
+
+  .btn-text {
+    @apply text-black text-opacity-50 flex gap-3 items-center px-0 py-0 min-w-0 hover:text-opacity-100 hover:text-beige focus-visible:text-opacity-100 focus:text-beige disabled:text-opacity-100 disabled:text-beige;
+  }
+}

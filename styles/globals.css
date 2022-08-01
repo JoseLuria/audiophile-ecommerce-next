@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url(./components/Button.css);
+@import url(./components/HomePattern.css);
+
+body {
+  font-family: "Manrope", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button,
+a,
+input,
+div {
+  outline: none;
+}
+
+input,
+button,
+a {
+  font-family: inherit;
+  color: inherit;
+}
+
+a {
+  display: block;
+}
+
+hr {
+  border: none;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.image-beige:hover,
+.image-beige:focus-visible {
+  filter: brightness(0) saturate(100%) invert(53%) sepia(82%) saturate(384%)
+    hue-rotate(337deg) brightness(90%) contrast(86%);
+}

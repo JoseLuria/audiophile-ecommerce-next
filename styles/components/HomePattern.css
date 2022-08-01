@@ -1,0 +1,21 @@
+.bg-pattern-circles {
+  background-image: url(/assets/home/desktop/pattern-circles.svg);
+  background-repeat: no-repeat;
+  background-size: 34.875rem;
+  background-position-x: center;
+  background-position-y: -7.5rem;
+}
+
+@media (min-width: 768px) {
+  .bg-pattern-circles {
+    background-size: auto;
+    background-position-y: 128%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .bg-pattern-circles {
+    background-position-x: -60%;
+    background-position-y: 10%;
+  }
+}
