@@ -56,7 +56,7 @@ MONGO_URL=mongodb://localhost:27017/audiophiledb
 
 ## 💽 Usando la API para crear los datos de los productos y categorías
 
-Next JS te permite crear una API en la aplicación para de esta manera tener el Frontend y Backend en el mismo lugar para crear los datos con la información de los productos y categorías puedes usar el siguiente enpoint:
+Next JS te permite crear una API en la aplicación para de esta manera tener el Frontend y Backend en el mismo lugar, para crear los datos con la información de los productos y categorías puedes usar el siguiente enpoint usando una petición *POST*:
 
 ```shell
 http://localhost:3000/api/seed
