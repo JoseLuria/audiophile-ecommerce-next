@@ -1,8 +1,8 @@
 # 🤖 Audiophile e-commerce website challenge
 
-Una tienda con productos de audio creada con NextJs usando Static site generation, Next API, Middelwares, TypeScript, Tailwind y Mongoose para persistir la información en una base de datos de MongoDB.
+Una tienda con productos de audio creada con NextJs usando Static site generation, Next API, Next Middelwares, TypeScript, Tailwind y Mongoose para persistir la información en una base de datos de MongoDB.
 
-[Puedes ver el sitio en línea aquí]()
+[Puedes ver el sitio en línea aquí](https://github.com/joseluria/audiophile-ecommerce-next.git)
 
 ## 🖼️ Screenshots
 
@@ -13,13 +13,13 @@ Una tienda con productos de audio creada con NextJs usando Static site generatio
 Primero clona el repositorio desde GitHub.
 
 ```shell
-git clone https://github.com/respository-name
+git clone https://github.com/joseluria/audiophile-ecommerce-next.git
 ```
 
 Muévete a la carpeta del proyecto.
 
 ```shell
-cd folder-name
+cd audiophile-ecommerce-next
 ```
 
 Instala las dependencias con el siguiente comando:
@@ -38,7 +38,7 @@ npm run dev
 
 *Para realizar este paso es obligatorio tener [Docker](https://www.docker.com/products/docker-desktop/) instalado, de igual forma puedes usar tu propia base de datos local o de MongoDB Atlas.*
 
-La aplicación hace uso de una base de datos de MongoDB, de forma opcional puedes usar el archivo docker-compose.yml para levantar una base de datos de forma local con el siguiente comando:
+Puedes usar el archivo **docker-compose.yml** para levantar una base de datos de forma local con el siguiente comando:
 
 ```shell
 docker-compose up -d
@@ -58,13 +58,31 @@ MONGO_URL=mongodb://localhost:27017/audiophiledb
 
 Next JS te permite crear una API en la aplicación para de esta manera tener el Frontend y Backend en el mismo lugar, para crear los datos con la información de los productos y categorías puedes usar el siguiente enpoint usando una petición *POST*:
 
+🚨 Esta funcionalidad solo sirve en el entorno de desarrollo.
+
 ```shell
 http://localhost:3000/api/seed
 ```
 
 En el archivo **data.ts** en la carpeta **database** puedes encontrar el arreglo con todos los datos de los productos y categorías.
 
-[La documentación completa de la API la puedes encontrar en la aquí]()
+[La documentación completa de la API la puedes encontrar en la aquí](https://github.com/joseluria/audiophile-ecommerce-next.git)
+
+## 🧾 Creando las órdenes
+
+Puedes crear una orden al momento de realizar la compra con el siguiente endpoint usando una petición *POST*:
+
+```bash
+http://localhost:3000/api/order
+```
+
+A considerar:
+
+- 🚨 Ninguno de los datos proporcionados por el usuario se guardarán en la base de datos a excepción del nombre del usuario. La lista de productos y el total de la orden.
+
+- 📨 En caso de que el email sea válido, deberías de recibir un correo de confirmación de la compra.
+
+- 💵 Los pagos con PayPal son simulados, por lo que no recibirás ningún cargo extra en caso de que uses esta opción y proporciones datos correctos.
 
 ## ⚙️ Esta aplicación fue construida usando las siguientes tecnologías
 
@@ -74,6 +92,7 @@ En el archivo **data.ts** en la carpeta **database** puedes encontrar el arreglo
 - [Framer Motion](https://www.framer.com/docs/animation/)
 - [Redux Toolkit](https://redux-toolkit.js.org/)
 - [React Toastify](https://fkhadra.github.io/react-toastify/introduction)
+- [Yup](https://github.com/jquense/yup)
 - [MongoDB](https://www.mongodb.com/)
 
 ## 📄 Licencia

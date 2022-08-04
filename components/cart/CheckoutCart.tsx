@@ -8,7 +8,22 @@ export const CheckoutCart = () => {
   const vat = totalPrice * cartList.length > 0 ? totalPrice * 0.2 : 0;
 
   const handleCreateOrder = async () => {
-    const options = createFetchOptions({ message: "Hello" });
+    const direction = {
+      name: "José Antonio Luria Felipe",
+      email: "jos02-log18@hotmail.com",
+      phone: "+528994596485",
+      adress: "Calle cardenal #406",
+      zip: 88735,
+      city: "EL HALCON-REYNOSA",
+      country: "México",
+    }
+
+    const body = {
+      direction,
+      payMethod: "cash"
+    }
+
+    const options = createFetchOptions(body);
     const response = await fetch("/api/order", options);
     const result = await response.json();
 
@@ -18,7 +33,7 @@ export const CheckoutCart = () => {
   return (
     <div className="w-full py-8 px-6 flex flex-col gap-8 bg-white rounded-lg lg:w-[21.875rem]">
       <p className="text-lg uppercase font-bold">Summary</p>
-      <div>
+      <div className="flex flex-col gap-6">
         {cartList.map((product) => (
           <CartElement key={product.slug} product={product} />
         ))}

@@ -1,19 +1,25 @@
 import { NextRequest, NextResponse } from "next/server";
-import { cartStateInterface } from "./redux";
+import { CartProductInterface } from "./interface";
 
 export function middleware(req: NextRequest) {
-  const cartCookie = req.cookies.get("cart");
+  const cookieCartList = req.cookies.get("cartList");
+  const cookieTotalPrice = req.cookies.get("totalPrice")
   const url = req.nextUrl.clone();
   url.pathname = "/";
 
-  if (!cartCookie) {
+  if (!cookieCartList || !cookieTotalPrice) {
     return NextResponse.redirect(url);
   }
 
-  const cartState: cartStateInterface = JSON.parse(cartCookie);
+  const cartList: CartProductInterface[] = JSON.parse(cookieCartList);
+  const totalPrice: number = JSON.parse(cookieTotalPrice)
 
-  if (cartState.cartList.length <= 0) {
+  if (cartList.length <= 0) {
     return NextResponse.redirect(url);
+  }
+
+  if (totalPrice <= 0){
+    return NextResponse.redirect(url); 
   }
 
   return NextResponse.next();

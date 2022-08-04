@@ -33,7 +33,7 @@ export const ProductHead: FC<Props> = ({
     const cartProduct = {
       name,
       slug,
-      image,
+      image: image.mobile.src,
       price,
       quantity,
     };

@@ -32,9 +32,9 @@ export const CartElement: FC<Props> = ({ product, incremental }) => {
       <span className="w-16 flex">
         <Image
           className="w-full rounded-lg"
-          width={image.mobile.width}
-          height={image.mobile.height}
-          src={image.mobile.src}
+          width={654}
+          height={654}
+          src={image}
           alt={name}
         />
       </span>

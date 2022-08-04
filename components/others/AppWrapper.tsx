@@ -14,12 +14,24 @@ export const AppWrapper: FC<AppWrapperInterface> = ({ children }) => {
   const initialCart = { cartList: [], totalPrice: 0 };
 
   useEffect(() => {
-    if (localStorage.cart) {
-      const cart = localStorage.cart;
-      dispatch(setCart(JSON.parse(cart)));
+    if (localStorage.cartList && localStorage.totalPrice) {
+      const cartList = JSON.parse(localStorage.cartList)
+      const totalPrice = JSON.parse(localStorage.totalPrice)
+      
+      const cart = {
+        cartList,
+        totalPrice
+      }
+
+      dispatch(setCart(cart));
     } else {
-      localStorage.setItem("cart", JSON.stringify(initialCart));
-      Cookie.set("cart", JSON.stringify(initialCart));
+      const cartList = JSON.stringify(initialCart.cartList)
+      const totalPrice = JSON.stringify(initialCart.totalPrice)
+
+      localStorage.setItem("cartList", cartList);
+      localStorage.setItem("totalPrice", totalPrice)
+      Cookie.set("cartList", cartList);
+      Cookie.set("totalPrice", totalPrice)
     }
   });
 

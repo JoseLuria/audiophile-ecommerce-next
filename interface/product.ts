@@ -39,10 +39,11 @@ export interface ProductInterface {
 
 type CartProductType = Pick<
   ProductInterface,
-  "name" | "slug" | "image" | "price"
+  "name" | "slug" | "price"
 >;
 
 export interface CartProductInterface extends CartProductType {
+  image: string
   quantity: number;
 }
 
