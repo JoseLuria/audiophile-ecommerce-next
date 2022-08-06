@@ -25,7 +25,7 @@ export const CheckoutResult: FC<Props> = ({ data }) => {
               <h2 className="uppercase font-bold text-2xl leading-[1.625rem] md:text-[2rem] md:leading-9">
                 Error
               </h2>
-              <Text className="text-red text-opacity-100">
+              <Text color="black">
                 An error occurred while processing your order.
                 <br />
                 Error message: {data.message}.

@@ -163,7 +163,7 @@ export const createEmail = (
                 <img
                   width="50"
                   height="50" 
-                  src="https://audiophile-ecommerce-website.netlify.app/products/product-xx99-mark-two-headphones/desktop/image-product.jpg"
+                  src="${cartList[0].image}"
                   alt="product-image"
                 />
                 <p class="product-text">

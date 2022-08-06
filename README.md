@@ -66,8 +66,6 @@ http://localhost:3000/api/seed
 
 En el archivo **data.ts** en la carpeta **database** puedes encontrar el arreglo con todos los datos de los productos y categorías.
 
-[La documentación completa de la API la puedes encontrar en la aquí](https://github.com/joseluria/audiophile-ecommerce-next.git)
-
 ## 🧾 Creando las órdenes
 
 Puedes crear una orden al momento de realizar la compra con el siguiente endpoint usando una petición _POST_:

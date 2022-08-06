@@ -40,17 +40,15 @@ const createOrder = async (
     const { cartList, totalPrice } = parseCookies(req.cookies);
 
     const dbTotalPrices = await dbOrder.checkPrice(cartList);
-
     if (dbTotalPrices !== totalPrice) {
       return res.status(400).json({ message: "Invalid price validation" });
     }
 
     const shipping = Number(process.env.NEXT_SHIPING) || 50;
     const grandTotal = totalPrice + shipping;
-
     await new Email(email).send(cartList, grandTotal);
 
-    db.connect();
+    await db.connect();
     const newOrder = new OrderModel({
       user: name,
       cartList,
@@ -59,10 +57,10 @@ const createOrder = async (
     });
 
     const order = await newOrder.save({ validateBeforeSave: true });
-    db.disconnect();
+    await db.disconnect();
     res.status(200).json(order);
   } catch (error) {
-    db.disconnect();
+    await db.disconnect();
     res.status(400).json({ message: "Invalid request data" });
   }
 };
