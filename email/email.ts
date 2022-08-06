@@ -8,16 +8,27 @@ export class Email {
 
   constructor(emails: any) {
     this.emails = emails;
-    this.from = process.env.MAIL_FROM!;
+    this.from = `Audiophile <${process.env.MAIL_FROM}>`;
   }
 
   newTransport() {
+    if (process.env.NODE_ENV === "development") {
+      return nodemailer.createTransport({
+        host: "smtp.mailtrap.io",
+        port: 2525,
+        auth: {
+          user: process.env.MAILTRAP_USER,
+          pass: process.env.MAILTRAP_PASS,
+        },
+      });
+    }
+
     return nodemailer.createTransport({
-      host: "smtp.mailtrap.io",
-      port: 2525,
+      host: "smtp.sendgrid.net",
+      port: 587,
       auth: {
-        user: process.env.MAILTRAP_USER,
-        pass: process.env.MAILTRAP_PASS,
+        user: process.env.SENDGRID_USER,
+        pass: process.env.SENDGRID_KEY,
       },
     });
   }
@@ -30,7 +41,7 @@ export class Email {
       to: this.emails,
       html,
       text: html,
-      subject: "Your order summary",
+      subject: "Audiophile - Order summary",
     });
   }
 }

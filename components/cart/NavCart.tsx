@@ -12,6 +12,7 @@ interface Props {
 export const NavCart: FC<Props> = ({ action }) => {
   const router = useRouter();
   const dispatch = useDispatch();
+  const checkout = "/checkout";
 
   const { cartList, totalPrice } = useSelector(getCartState);
 
@@ -21,6 +22,8 @@ export const NavCart: FC<Props> = ({ action }) => {
   };
 
   const handleRemoveAll = () => {
+    if (cartList.length <= 0) return;
+
     dispatch(removeAll());
     toast.error("Removed all products");
   };
@@ -33,12 +36,14 @@ export const NavCart: FC<Props> = ({ action }) => {
       >
         <div className="flex items-center justify-between">
           <p className="text-lg font-bold uppercase">{`cart (${cartList.length})`}</p>
-          <button
-            onClick={handleRemoveAll}
-            className="text-black text-opacity-50 text-[0.938rem] underline"
-          >
-            Remove all
-          </button>
+          {router.asPath !== checkout && (
+            <button
+              onClick={handleRemoveAll}
+              className="text-black text-opacity-50 text-[0.938rem] underline"
+            >
+              Remove all
+            </button>
+          )}
         </div>
         <div className="grow flex overflow-auto scrollbar-hide">
           {cartList.length <= 0 ? (
@@ -48,7 +53,11 @@ export const NavCart: FC<Props> = ({ action }) => {
           ) : (
             <div className="w-full flex flex-col gap-6">
               {cartList.map((product) => (
-                <CartElement product={product} key={product.slug} incremental />
+                <CartElement
+                  product={product}
+                  key={product.slug}
+                  incremental={router.asPath === checkout ? false : true}
+                />
               ))}
             </div>
           )}
@@ -61,7 +70,7 @@ export const NavCart: FC<Props> = ({ action }) => {
         </div>
         <Button
           action={() => handleRedirect("/checkout")}
-          disabled={cartList.length <= 0}
+          disabled={cartList.length <= 0 || router.asPath === checkout}
           full
         >
           Checkout

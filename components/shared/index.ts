@@ -11,3 +11,4 @@ export * from "./ResponsiveImage";
 export * from "./ModalContainer";
 export * from "./NavMenu";
 export * from "./Quantity";
+export * from "./Input";

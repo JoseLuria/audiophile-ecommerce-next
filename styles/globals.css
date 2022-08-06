@@ -42,3 +42,7 @@ hr {
   filter: brightness(0) saturate(100%) invert(53%) sepia(82%) saturate(384%)
     hue-rotate(337deg) brightness(90%) contrast(86%);
 }
+
+input[type="submit"] {
+  background-color: #d87d4a;
+}

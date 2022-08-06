@@ -25,8 +25,7 @@ export const createEmail = (
         
           body {
             background-color: #f1f1f1;
-            padding: 24px;
-            width: 100%;
+            padding: 36px;
             font-family: "Manrope", sans-serif;
             display: flex;
           }
@@ -35,10 +34,10 @@ export const createEmail = (
             font-size: 15px;
             width: 100%;
             max-width: 540px;
-            margin: auto auto;
+            margin: auto;
             background-color: white;
             border-radius: 8px;
-            padding: 32px;
+            padding: 24px;
           }
         
           .mail-title {
@@ -63,8 +62,6 @@ export const createEmail = (
           .mail-items-preview {
             width: 100%;
             display: flex;
-            justify-content: space-between;
-            /* position: relative; */
             align-items: center;
           }
         
@@ -75,6 +72,7 @@ export const createEmail = (
         
           .product-text {
             font-weight: bold;
+            margin: 0 auto;
           }
         
           .product-text-price {
@@ -142,10 +140,12 @@ export const createEmail = (
               width: 50%;
               border-radius: 0 8px 8px 0;
               display: flex;
-              flex-direction: column;
-              justify-content: center;
             }
-          
+         
+            .mail-total-text {
+              margin: auto 0;
+            }
+            
             .mail-items-wrapper {
               display: flex;
               width: 100%;
@@ -161,6 +161,8 @@ export const createEmail = (
             <div class="mail-items">
               <div class="mail-items-preview">
                 <img
+                  width="50"
+                  height="50" 
                   src="https://audiophile-ecommerce-website.netlify.app/products/product-xx99-mark-two-headphones/desktop/image-product.jpg"
                   alt="product-image"
                 />
@@ -168,7 +170,7 @@ export const createEmail = (
                   ${handleFormatProductName(cartList[0].name)}
                   <br />
                   <span class="product-text-price">
-                    $ ${handleFormatPrice(cartList[0].price)}
+                    ${handleFormatPrice(cartList[0].price)}
                   </span>
                 </p>
                 <p class="product-quantity">
@@ -184,8 +186,10 @@ export const createEmail = (
               }
             </div>
             <div class="mail-total">
-              <p class="mail-total-title">Grand total</p>
-              <p class="mail-total-price">$ ${handleFormatPrice(grandTotal)}</p>
+              <div class="mail-total-text">
+                <p class="mail-total-title">Grand total</p>
+                <p class="mail-total-price">${handleFormatPrice(grandTotal)}</p>
+              </div>
             </div>
           </div>
         </div>
