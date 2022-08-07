@@ -8,6 +8,9 @@
 # database data
 /mongo
 
+# production data
+data.production.ts
+
 # testing
 /coverage
 

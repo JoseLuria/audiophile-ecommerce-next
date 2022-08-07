@@ -2,7 +2,7 @@
 
 Una tienda con productos de audio creada con NextJs usando Static site generation, Next API, Next Middelwares, TypeScript, Tailwind y Mongoose para persistir la información en una base de datos de MongoDB.
 
-[Puedes ver el sitio en línea aquí](https://github.com/joseluria/audiophile-ecommerce-next.git)
+[Puedes ver el sitio en línea aquí](https://audiophile-next.herokuapp.com/)
 
 ## 🖼️ Screenshots
 
