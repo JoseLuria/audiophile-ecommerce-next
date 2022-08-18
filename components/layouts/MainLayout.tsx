@@ -1,6 +1,6 @@
 import { FC } from "react";
-import { LayoutProps } from "../../interface";
-import { CustomHead, Navbar, Footer } from "../";
+import { LayoutProps } from "@/interface";
+import { CustomHead, Navbar, Footer } from "@/components";
 
 export const MainLayout: FC<LayoutProps> = ({
   title,

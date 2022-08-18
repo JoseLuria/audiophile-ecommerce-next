@@ -1,7 +1,7 @@
 import Image from "next/image";
-import { Text } from "../";
-import { bestSectionImagesObject } from "../../images";
-import { useResponsiveImages } from "../../hooks";
+import { Text } from "@/components";
+import { bestSectionImagesObject } from "@/images";
+import { useResponsiveImages } from "@/hooks";
 
 export const BestAudio = () => {
   const { src, width, height } = useResponsiveImages(bestSectionImagesObject);

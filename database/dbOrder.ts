@@ -1,6 +1,6 @@
-import { db } from "./";
-import { ProductModel } from "../models";
-import { CartProductInterface } from "../interface";
+import { db } from "@/database";
+import { ProductModel } from "@/models";
+import { CartProductInterface } from "@/interface";
 
 export const checkPrice = async (cart: CartProductInterface[]) => {
   if (cart.length <= 0) {

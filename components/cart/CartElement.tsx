@@ -1,10 +1,10 @@
 import { FC, useEffect } from "react";
 import Image from "next/image";
 import { toast } from "react-toastify";
-import { Quantity } from "../";
-import { CartProductInterface } from "../../interface";
-import { handleFormatProductName, handleFormatPrice } from "../../utils";
-import { useDispatch, changeQuantity, removeFromCart } from "../../redux";
+import { Quantity } from "@/components";
+import { CartProductInterface } from "@/interface";
+import { handleFormatProductName, handleFormatPrice } from "@/utils";
+import { useDispatch, changeQuantity, removeFromCart } from "@/redux-state";
 
 interface Props {
   product: CartProductInterface;

@@ -1,7 +1,7 @@
 import { FC } from "react";
 import Head from "next/head";
-import { HeadInterface } from "../../interface";
-import { data } from "../../database";
+import { HeadInterface } from "@/interface";
+import { data } from "@/database";
 
 export const CustomHead: FC<HeadInterface> = ({ title, description, otg }) => {
   return (

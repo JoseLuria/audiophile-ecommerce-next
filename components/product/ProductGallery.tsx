@@ -1,6 +1,6 @@
 import { FC } from "react";
-import { ProductGalleryInterface } from "../../interface";
-import { ResponsiveImage } from "../";
+import { ProductGalleryInterface } from "@/interface";
+import { ResponsiveImage } from "@/components";
 
 interface Props {
   galleryImages: ProductGalleryInterface;

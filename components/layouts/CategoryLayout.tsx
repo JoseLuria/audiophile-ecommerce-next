@@ -1,6 +1,12 @@
 import { FC } from "react";
-import { LayoutProps } from "../../interface";
-import { CustomHead, Navbar, CategoriesList, BestAudio, Footer } from "../";
+import { LayoutProps } from "@/interface";
+import {
+  CustomHead,
+  Navbar,
+  CategoriesList,
+  BestAudio,
+  Footer,
+} from "@/components";
 
 export const CategoryLayout: FC<LayoutProps> = ({
   title,

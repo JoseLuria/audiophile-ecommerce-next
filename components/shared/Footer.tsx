@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { Link, NavList, Text } from "./";
-import { data } from "../../database";
+import { Link, NavList, Text } from "@/components";
+import { data } from "@/database";
 
 export const Footer = () => {
   return (

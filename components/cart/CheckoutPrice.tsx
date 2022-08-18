@@ -1,5 +1,5 @@
-import { handleFormatPrice } from "../../utils";
 import { FC } from "react";
+import { handleFormatPrice } from "@/utils";
 
 interface Props {
   className?: string;

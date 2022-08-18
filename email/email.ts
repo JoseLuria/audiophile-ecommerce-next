@@ -1,6 +1,6 @@
 import nodemailer from "nodemailer";
-import { createEmail } from "./";
-import { CartProductInterface } from "../interface";
+import { createEmail } from "@/email";
+import { CartProductInterface } from "@/interface";
 
 export class Email {
   private emails: any;

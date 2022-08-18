@@ -1,5 +1,5 @@
-import { db } from ".";
-import { ProductModel } from "../models";
+import { db } from "@/database";
+import { ProductModel } from "@/models";
 
 export const getCategoryProduct = async (category: string) => {
   await db.connect();

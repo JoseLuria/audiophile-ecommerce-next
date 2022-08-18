@@ -1,11 +1,17 @@
 import { useState } from "react";
 import Image from "next/image";
-import { CheckoutCart, Input, FormGroup, Text, CheckoutResult } from "../";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { yupOrder } from "../../validations";
-import { OrderInterface } from "../../interface";
-import { useFetchOrder } from "../../hooks";
+import {
+  CheckoutCart,
+  Input,
+  FormGroup,
+  Text,
+  CheckoutResult,
+} from "@/components";
+import { yupOrder } from "@/validations";
+import { OrderInterface } from "@/interface";
+import { useFetchOrder } from "@/hooks";
 
 export const CheckoutFrom = () => {
   const {

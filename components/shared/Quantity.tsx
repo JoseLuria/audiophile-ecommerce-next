@@ -1,6 +1,6 @@
 import { FC } from "react";
 import Image from "next/image";
-import { ComponentProps } from "../../interface";
+import { ComponentProps } from "@/interface";
 
 type quantityFunction = () => void;
 

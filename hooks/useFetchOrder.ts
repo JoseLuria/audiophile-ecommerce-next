@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { createFetchOptions } from "../utils";
-import { OrderInterface, OrderData } from "../interface";
+import { createFetchOptions } from "@/utils";
+import { OrderInterface, OrderData } from "@/interface";
 
 export const useFetchOrder = () => {
   const [data, setData] = useState<OrderData>();

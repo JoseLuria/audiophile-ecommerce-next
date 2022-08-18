@@ -1,4 +1,4 @@
-import { DirectionInterface, CartProductInterface } from "./";
+import { DirectionInterface, CartProductInterface } from "@/interface";
 
 export interface OrderInterface extends DirectionInterface {
   payMethod: "cash" | "e-money";

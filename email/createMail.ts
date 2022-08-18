@@ -1,5 +1,5 @@
-import { CartProductInterface } from "../interface";
-import { handleFormatPrice, handleFormatProductName } from "../utils";
+import { CartProductInterface } from "@/interface";
+import { handleFormatPrice, handleFormatProductName } from "@/utils";
 
 export const createEmail = (
   cartList: CartProductInterface[],

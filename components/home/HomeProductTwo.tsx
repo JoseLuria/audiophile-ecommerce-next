@@ -1,5 +1,5 @@
-import { Button, ResponsiveImage } from "../";
-import { homeSpeakerZ7ImagesObject } from "../../images";
+import { Button, ResponsiveImage } from "@/components";
+import { homeSpeakerZ7ImagesObject } from "@/images";
 
 export const HomeProductTwo = () => {
   return (

@@ -1,8 +1,13 @@
 import { FC } from "react";
 import { useRouter } from "next/router";
-import { ModalContainer, Text, Button, CartElement } from "../";
-import { useSelector, useDispatch, getCartState, removeAll } from "../../redux";
-import { handleFormatPrice } from "../../utils";
+import { ModalContainer, Text, Button, CartElement } from "@/components";
+import {
+  useSelector,
+  useDispatch,
+  getCartState,
+  removeAll,
+} from "@/redux-state";
+import { handleFormatPrice } from "@/utils";
 import { toast } from "react-toastify";
 
 interface Props {

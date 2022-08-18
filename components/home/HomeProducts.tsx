@@ -1,4 +1,4 @@
-import { HomeProductOne, HomeProductTwo, HomeProductThree } from "./";
+import { HomeProductOne, HomeProductTwo, HomeProductThree } from "@/components";
 
 export const HomeProducts = () => {
   return (

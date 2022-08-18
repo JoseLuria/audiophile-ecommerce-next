@@ -1,6 +1,6 @@
 import { FC } from "react";
-import { Button, Text, ResponsiveImage } from "../";
-import { CategoryProductInterface } from "../../interface";
+import { Button, Text, ResponsiveImage } from "@/components";
+import { CategoryProductInterface } from "@/interface";
 
 interface Props {
   product: CategoryProductInterface;

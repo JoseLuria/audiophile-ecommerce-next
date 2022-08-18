@@ -1,7 +1,7 @@
 import { FC } from "react";
 import Image from "next/image";
-import { Link } from "../";
-import { ComponentProps } from "../../interface";
+import { Link } from "@/components";
+import { ComponentProps } from "@/interface";
 
 interface Props extends ComponentProps {
   action?: () => void;

@@ -1,7 +1,7 @@
 import { NextPage, GetStaticPaths, GetStaticProps } from "next";
-import { dbCategory, dbProduct } from "../../database";
-import { CategoryInterface, CategoryProductInterface } from "../../interface";
-import { CategoryLayout, ProductCard } from "../../components";
+import { dbCategory, dbProduct } from "@/database";
+import { CategoryInterface, CategoryProductInterface } from "@/interface";
+import { CategoryLayout, ProductCard } from "@/components";
 
 interface Props {
   category: CategoryInterface;

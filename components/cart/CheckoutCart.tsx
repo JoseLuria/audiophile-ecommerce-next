@@ -1,6 +1,6 @@
 import { FC, ReactNode } from "react";
-import { getCartState, useSelector } from "../../redux";
-import { CartElement, CheckoutPrice } from "../";
+import { getCartState, useSelector } from "@/redux-state";
+import { CartElement, CheckoutPrice } from "@/components";
 
 interface Props {
   children: ReactNode;

@@ -1,6 +1,6 @@
 import { FC } from "react";
-import { Link } from "./";
-import { data } from "../../database";
+import { Link } from "@/components";
+import { data } from "@/database";
 
 interface Props {
   type?: "navbar" | "footer";

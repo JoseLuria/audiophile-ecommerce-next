@@ -1,5 +1,5 @@
-import { Button, ResponsiveImage } from "../";
-import { homeEarphonesImagesObject } from "../../images";
+import { Button, ResponsiveImage } from "@/components";
+import { homeEarphonesImagesObject } from "@/images";
 
 export const HomeProductThree = () => {
   return (

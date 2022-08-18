@@ -1,8 +1,8 @@
 import { FC } from "react";
 import Image from "next/image";
-import { Text, Button } from "../";
-import { handleFormatPrice, handleFormatProductName } from "../../utils";
-import { useDispatch, removeAll } from "../../redux";
+import { Text, Button } from "@/components";
+import { handleFormatPrice, handleFormatProductName } from "@/utils";
+import { useDispatch, removeAll } from "@/redux-state";
 
 interface Props {
   data?: any;

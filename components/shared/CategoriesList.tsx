@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { Button } from "../";
-import { data } from "../../database";
+import { Button } from "@/components";
+import { data } from "@/database";
 
 export const CategoriesList = () => {
   return (

@@ -1,5 +1,5 @@
 import { NextPage } from "next";
-import { MainLayout, Button, Text } from "../components";
+import { MainLayout, Button, Text } from "@/components";
 
 const Error: NextPage = () => {
   return (

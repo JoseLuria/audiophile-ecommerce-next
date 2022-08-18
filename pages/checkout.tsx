@@ -1,4 +1,4 @@
-import { MainLayout, GoBack, CheckoutFrom } from "../components";
+import { MainLayout, GoBack, CheckoutFrom } from "@/components";
 
 const Checkout = () => {
   return (

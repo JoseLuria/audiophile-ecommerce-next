@@ -6,7 +6,7 @@ import {
   CategoriesList,
   HomeProducts,
   BestAudio,
-} from "../components";
+} from "@/components";
 
 const Home: NextPage = () => {
   return (

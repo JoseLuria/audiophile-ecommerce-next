@@ -1,5 +1,5 @@
 import { CSSProperties, ReactNode } from "react";
-import { HeadInterface } from "./";
+import { HeadInterface } from "@/interface";
 
 export interface ComponentProps {
   children?: ReactNode;

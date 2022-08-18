@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { LayoutProps } from "../../interface";
+import { LayoutProps } from "@/interface";
 import {
   CustomHead,
   Navbar,
@@ -7,7 +7,7 @@ import {
   CategoriesList,
   BestAudio,
   GoBack,
-} from "../";
+} from "@/components";
 
 export const ProductLayout: FC<LayoutProps> = ({
   title,

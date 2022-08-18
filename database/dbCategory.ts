@@ -1,5 +1,5 @@
-import { db } from ".";
-import { CategoryModel } from "../models";
+import { db } from "@/database";
+import { CategoryModel } from "@/models";
 
 export const getCategoryPaths = async () => {
   await db.connect();

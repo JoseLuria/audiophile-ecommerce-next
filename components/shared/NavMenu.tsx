@@ -1,7 +1,7 @@
 import React, { FC } from "react";
-import { CategoriesList, ModalContainer } from "../";
 import { motion } from "framer-motion";
-import { navBarMenuVariants } from "../../animations";
+import { CategoriesList, ModalContainer } from "@/components";
+import { navBarMenuVariants } from "@/animations";
 
 interface Props {
   action: () => void;

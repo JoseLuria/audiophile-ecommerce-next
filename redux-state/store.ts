@@ -1,5 +1,5 @@
 import { configureStore, combineReducers } from "@reduxjs/toolkit";
-import { saveToLocalStorage } from "./";
+import { saveToLocalStorage } from "@/utils";
 import cartSlice from "./cartSlice";
 
 const reducer = combineReducers({

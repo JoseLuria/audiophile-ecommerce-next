@@ -1,10 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import { yupCart, yupOrder } from "../../../validations";
-import { OrderInterface, OrderData } from "../../../interface";
-import { dbOrder, db } from "../../../database";
-import { parseCookies } from "../../../utils";
-import { Email } from "../../../email";
-import { OrderModel } from "../../../models";
+import { yupCart, yupOrder } from "@/validations";
+import { OrderInterface, OrderData } from "@/interface";
+import { dbOrder, db } from "@/database";
+import { parseCookies } from "@/utils";
+import { Email } from "@/email";
+import { OrderModel } from "@/models";
 
 export default async function Handler(
   req: NextApiRequest,

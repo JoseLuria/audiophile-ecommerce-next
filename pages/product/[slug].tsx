@@ -5,9 +5,9 @@ import {
   ProductFeatures,
   ProductGallery,
   OtherProducts,
-} from "../../components";
-import { dbProduct } from "../../database";
-import { ProductPageInterface } from "../../interface";
+} from "@/components";
+import { dbProduct } from "@/database";
+import { ProductPageInterface } from "@/interface";
 
 interface Props {
   product: ProductPageInterface;

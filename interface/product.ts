@@ -1,4 +1,4 @@
-import { ResponsiveImages } from "./";
+import { ResponsiveImages } from "@/interface";
 
 interface IncludeElement {
   quantity: number;
@@ -37,13 +37,10 @@ export interface ProductInterface {
   others: OtherProduct[];
 }
 
-type CartProductType = Pick<
-  ProductInterface,
-  "name" | "slug" | "price"
->;
+type CartProductType = Pick<ProductInterface, "name" | "slug" | "price">;
 
 export interface CartProductInterface extends CartProductType {
-  image: string
+  image: string;
   quantity: number;
 }
 

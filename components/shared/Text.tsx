@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { ComponentProps } from "../../interface";
+import { ComponentProps } from "@/interface";
 
 interface Props extends ComponentProps {
   color?: "white" | "black" | "beige";

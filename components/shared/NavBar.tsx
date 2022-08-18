@@ -1,47 +1,45 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
-import { Link, NavList, NavCart, NavMenu } from "../";
-import { useAutoHideNavbar } from "../../hooks";
+import { AnimatePresence } from "framer-motion";
+import { Link, NavList, NavCart, NavMenu } from "@/components";
 
 export const Navbar = () => {
   const [showCart, setShowCart] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
-  const { showNavbar } = useAutoHideNavbar();
 
   const handleShowCart = () => {
     if (showMenu) {
       setShowMenu(false);
-      document.body.classList.remove("no-scroll");
     }
     setTimeout(() => {
       setShowCart(!showCart);
-      document.body.classList.toggle("no-scroll");
     }, 200);
   };
 
   const handleShowMenu = () => {
     if (showCart) {
       setShowCart(false);
-      document.body.classList.remove("no-scroll");
     }
     setTimeout(() => {
       setShowMenu(!showMenu);
-      document.body.classList.toggle("no-scroll");
     }, 200);
   };
 
   const handleRemoveCart = () => {
     showCart && setShowCart(false);
-    document.body.classList.remove("no-scroll");
   };
+
+  useEffect(() => {
+    if (showCart || showMenu) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
+  }, [showCart, showMenu]);
 
   return (
     <>
-      <motion.nav
-        animate={{ top: showNavbar ? 0 : -96 }}
-        className="w-full fixed left-0 border-b-[1px] border-b-white border-opacity-10 z-[2] h-[5.625rem] flex justify-center bg-black px-6 md:border-none md:px-10 lg:h-24"
-      >
+      <nav className="w-full fixed left-0 border-b-[1px] border-b-white border-opacity-10 z-[2] h-[5.625rem] flex justify-center bg-black px-6 md:border-none md:px-10 lg:h-24">
         <div className="h-full w-full flex relative justify-center items-center max-w-size md:border-b-[1px] md:border-b-white md:border-opacity-10 md:justify-start lg:justify-center">
           <button
             onClick={handleShowMenu}
@@ -83,7 +81,7 @@ export const Navbar = () => {
             />
           </button>
         </div>
-      </motion.nav>
+      </nav>
 
       <AnimatePresence>
         {showMenu && <NavMenu action={handleShowMenu} />}

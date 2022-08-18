@@ -1,11 +1,11 @@
 import { FC, useState } from "react";
 import Image from "next/image";
 import { toast } from "react-toastify";
-import { ProductInterface } from "../../interface";
-import { Button, Text, Quantity } from "..";
-import { useResponsiveImages } from "../../hooks";
-import { handleFormatPrice, handleFormatProductName } from "../../utils";
-import { addToCart, useDispatch } from "../../redux";
+import { ProductInterface } from "@/interface";
+import { Button, Text, Quantity } from "@/components";
+import { useResponsiveImages } from "@/hooks";
+import { handleFormatPrice, handleFormatProductName } from "@/utils";
+import { addToCart, useDispatch } from "@/redux-state";
 
 type Props = Pick<
   ProductInterface,

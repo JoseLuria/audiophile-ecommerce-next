@@ -1,6 +1,6 @@
 import { FC } from "react";
-import { Button, ResponsiveImage } from "../";
-import { OtherProductPage } from "../../interface";
+import { Button, ResponsiveImage } from "@/components";
+import { OtherProductPage } from "@/interface";
 
 interface Props {
   product: OtherProductPage;

@@ -1,9 +1,8 @@
 import Cookie from "js-cookie";
 import { FC, useEffect, ReactNode } from "react";
-import { setCart } from "../../redux";
-import { useDispatch } from "react-redux";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
+import { setCart, useDispatch } from "@/redux-state";
 
 interface AppWrapperInterface {
   children: ReactNode;
@@ -15,23 +14,23 @@ export const AppWrapper: FC<AppWrapperInterface> = ({ children }) => {
 
   useEffect(() => {
     if (localStorage.cartList && localStorage.totalPrice) {
-      const cartList = JSON.parse(localStorage.cartList)
-      const totalPrice = JSON.parse(localStorage.totalPrice)
-      
+      const cartList = JSON.parse(localStorage.cartList);
+      const totalPrice = JSON.parse(localStorage.totalPrice);
+
       const cart = {
         cartList,
-        totalPrice
-      }
+        totalPrice,
+      };
 
       dispatch(setCart(cart));
     } else {
-      const cartList = JSON.stringify(initialCart.cartList)
-      const totalPrice = JSON.stringify(initialCart.totalPrice)
+      const cartList = JSON.stringify(initialCart.cartList);
+      const totalPrice = JSON.stringify(initialCart.totalPrice);
 
       localStorage.setItem("cartList", cartList);
-      localStorage.setItem("totalPrice", totalPrice)
+      localStorage.setItem("totalPrice", totalPrice);
       Cookie.set("cartList", cartList);
-      Cookie.set("totalPrice", totalPrice)
+      Cookie.set("totalPrice", totalPrice);
     }
   });
 

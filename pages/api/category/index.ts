@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import { CategoryInterface } from "../../../interface";
-import { db } from "../../../database";
-import { CategoryModel } from "../../../models";
+import { CategoryInterface } from "@/interface";
+import { db } from "@/database";
+import { CategoryModel } from "@/models";
 
 type Data =
   | {

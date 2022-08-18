@@ -1,4 +1,4 @@
-import { CartProductInterface } from "../interface";
+import { CartProductInterface } from "@/interface";
 
 export type cookiesType = Partial<{ [key: string]: string }>;
 

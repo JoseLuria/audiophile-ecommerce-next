@@ -1,5 +1,5 @@
-import { heroImagesObject } from "../../images";
-import { Button, Text, ResponsiveImage } from "../";
+import { heroImagesObject } from "@/images";
+import { Button, Text, ResponsiveImage } from "@/components";
 
 export const HomeHeader = () => {
   return (

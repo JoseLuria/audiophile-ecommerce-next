@@ -1,6 +1,6 @@
 import { FC } from "react";
-import { OtherProductCard } from "../";
-import { ProductPageInterface } from "../../interface";
+import { OtherProductCard } from "@/components";
+import { ProductPageInterface } from "@/interface";
 
 type Props = Pick<ProductPageInterface, "others">;
 

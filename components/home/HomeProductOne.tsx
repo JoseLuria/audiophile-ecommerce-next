@@ -1,5 +1,5 @@
-import { Text, Button, ResponsiveImage } from "../";
-import { homeSpeakerZ9ImagesObject } from "../../images";
+import { Text, Button, ResponsiveImage } from "@/components";
+import { homeSpeakerZ9ImagesObject } from "@/images";
 
 export const HomeProductOne = () => {
   return (

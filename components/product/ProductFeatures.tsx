@@ -1,6 +1,6 @@
 import { FC } from "react";
-import { Text } from "../";
-import { ProductInterface } from "../../interface";
+import { Text } from "@/components";
+import { ProductInterface } from "@/interface";
 
 type Props = Pick<ProductInterface, "features" | "includes">;
 

@@ -1,7 +1,7 @@
 import { FC } from "react";
-import { ComponentProps } from "../../interface/component";
 import { motion } from "framer-motion";
-import { modalContainerVariants, modalWrapperVariants } from "../../animations";
+import { ComponentProps } from "@/interface";
+import { modalContainerVariants, modalWrapperVariants } from "@/animations";
 
 interface Props extends ComponentProps {
   action?: () => void;

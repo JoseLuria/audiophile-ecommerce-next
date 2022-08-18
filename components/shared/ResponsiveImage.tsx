@@ -1,7 +1,7 @@
 import { FC } from "react";
-import { ResponsiveImages, ComponentProps } from "../../interface";
-import { useResponsiveImages } from "../../hooks";
 import Image from "next/image";
+import { ResponsiveImages, ComponentProps } from "@/interface";
+import { useResponsiveImages } from "@/hooks";
 
 interface Props extends ComponentProps {
   image: ResponsiveImages;
