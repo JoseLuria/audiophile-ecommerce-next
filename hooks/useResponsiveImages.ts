@@ -23,13 +23,13 @@ export const useResponsiveImages = (ImagesObject: ResponsiveImages) => {
     }
   }, []);
 
-  if (screenSize && screenSize < 768) {
+  if (screenSize < 768) {
     return {
       src: ImagesObject.mobile.src,
       width: ImagesObject.mobile.width,
       height: ImagesObject.mobile.height,
     };
-  } else if (screenSize && screenSize < 1024) {
+  } else if (screenSize < 1024) {
     return {
       src: ImagesObject.tablet.src,
       width: ImagesObject.tablet.width,
